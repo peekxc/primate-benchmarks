@@ -60,7 +60,7 @@
         "warmup_time": -1
     },
     "benchmarks.TraceSuite.time_hutch": {
-        "code": "class TraceSuite:\n    def time_hutch(self):\n    \tfrom primate.trace import hutch\n    \n    \t# for os.listdir(DATA_DIR)\n    \tmatrix_npz = np.load(os.path.join(DATA_DIR, \"dw1024.npz\"), allow_pickle=True)\n    \tA = matrix_npz[\"matrix\"].item()\n    \tmeta = matrix_npz[\"meta\"].item()\n    \n    \ttr = hutch(self.d[\"sym50\"])\n\n    def setup(self):\n    \tfrom primate.random import symmetric\n    \n    \tself.d = {}\n    \tself.d[\"sym50\"] = symmetric(50)",
+        "code": "class TraceSuite:\n    def time_hutch(self):\n    \tfrom primate.trace import hutch\n    \n    \t# for os.listdir(DATA_DIR)\n    \tmatrix_npz = np.load(os.path.join(DATA_DIR, \"dw1024.npz\"), allow_pickle=True)\n    \tA = matrix_npz[\"matrix\"].item()\n    \tmeta = matrix_npz[\"meta\"].item()\n    \n    \ttr = hutch(A, converge=\"count\", count=100)\n\n    def setup(self):\n    \tfrom primate.random import symmetric\n    \n    \tself.d = {}\n    \tself.d[\"sym50\"] = symmetric(50)",
         "min_run_count": 2,
         "name": "benchmarks.TraceSuite.time_hutch",
         "number": 0,
@@ -71,7 +71,7 @@
         "sample_time": 0.01,
         "type": "time",
         "unit": "seconds",
-        "version": "9a1181992228cdc4c1e8d998dbf2751b06f2bcdf067ee165b71b39270ccd791b",
+        "version": "27d7b318361f3d094b8fed64afd88fb6ef2ef27fb8446dd4a5f20bbebb621cbe",
         "warmup_time": -1
     },
     "version": 2
