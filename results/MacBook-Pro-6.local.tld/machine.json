@@ -1,0 +1,9 @@
+{
+    "arch": "x86_64",
+    "cpu": "Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz",
+    "machine": "MacBook-Pro-6.local.tld",
+    "num_cpu": "12",
+    "os": "Darwin 19.6.0",
+    "ram": "17179869184",
+    "version": 1
+}
