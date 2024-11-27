@@ -3,7 +3,7 @@
     "project": "primate",
     "project_url": "https://peekxc.github.io/primate/",
     "repo": "https://github.com/peekxc/primate-benchmarks.git",
-    "branches": ["pythran_overhaul"], 
+    "branches": ["main"], 
     "environment_type": "existing",
     "pythons": ["3.11"]
     // Customizable commands for building the project.

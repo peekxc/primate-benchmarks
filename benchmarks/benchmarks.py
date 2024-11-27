@@ -50,3 +50,13 @@ class TraceSuite:
 		meta = matrix_npz["meta"].item()
 
 		tr = hutch(A, converge="count", count=100)
+
+	def time_hutch(self):
+		from primate.trace import hutch
+
+		# for os.listdir(DATA_DIR)
+		matrix_npz = np.load(os.path.join(DATA_DIR, "dw1024.npz"), allow_pickle=True)
+		A = matrix_npz["matrix"].item()
+		meta = matrix_npz["meta"].item()
+
+		tr = hutch(A, converge="count", count=100)
